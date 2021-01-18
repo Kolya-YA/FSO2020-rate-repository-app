@@ -1,12 +1,26 @@
 const theme = {
   colors: {
-    primary: '#0366d6',
+    tagColor: '#0366d6',
+    textPrimary: '#333',
+    textSecondary: '#888',
     textInverse: '#ffffff',
-    textHigh: '#333',
-    textLow: '#888',
     appBackground: '#e1e4e8',
     appBarBackground: '#24292e',
     repoItemBackground: '#ffffff',
+  },
+  fonts: {
+    main: 'System',
+  },
+  fontSizes: {
+    body: 14,
+    subheading: 16,
+  },
+  fontWeights: {
+    normal: '400',
+    bold: '700'
+  },
+  textMargin:{
+    bottom: 5
   }
 };
 
