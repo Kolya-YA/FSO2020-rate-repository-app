@@ -1,12 +1,13 @@
 const theme = {
   colors: {
     tagColor: '#0366d6',
+    errorColor: 'crimson',
     textPrimary: '#333',
     textSecondary: '#888',
     textInverse: '#ffffff',
     appBackground: '#e1e4e8',
     appBarBackground: '#24292e',
-    repoItemBackground: '#ffffff',
+    itemBackground: '#ffffff',
   },
   fonts: {
     main: 'System',
@@ -21,6 +22,9 @@ const theme = {
   },
   textMargin:{
     bottom: 5
+  },
+  paddings: {
+    itemPadding: 12
   }
 };
 

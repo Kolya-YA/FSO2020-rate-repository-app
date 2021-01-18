@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 
-import theme from '../config/theme';
 import Text from './Text';
 import LangTag from './LangTag';
 

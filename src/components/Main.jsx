@@ -3,6 +3,8 @@ import { StyleSheet, View } from 'react-native';
 import RepositoryList from './RepositoryList';
 import AppBar from './AppBar';
 import theme from '../config/theme';
+import { Redirect, Route, Switch } from 'react-router-native';
+import SignIn from './SighnIn';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,7 +18,11 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <AppBar />
-      <RepositoryList />
+      <Switch>
+        <Route path='/' component={RepositoryList} exact />
+        <Route path='/sign_in' component={SignIn} />
+        <Redirect to='/' />
+      </Switch>
     </View>
   );
 };

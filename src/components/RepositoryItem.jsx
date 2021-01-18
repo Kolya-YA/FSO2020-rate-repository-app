@@ -7,8 +7,8 @@ import RepositoryItemCore from './repositoryItemCore';
 
 const styles = StyleSheet.create({
   container: {
-    padding: 12,
-    backgroundColor: theme.colors.repoItemBackground,
+    padding: theme.paddings.itemPadding,
+    backgroundColor: theme.colors.itemBackground,
   }
 });
 
