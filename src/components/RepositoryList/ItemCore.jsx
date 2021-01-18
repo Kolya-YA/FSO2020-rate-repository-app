@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 
-import Text from './Text';
+import Text from '../Text';
 import LangTag from './LangTag';
 
 const styles = StyleSheet.create({

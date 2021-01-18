@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import RepositoryItemBottomBlock from './RepositoryItemBottomBlock';
+import RepositoryItemBottomBlock from './ItemBottomBlock';
 
 const styles = StyleSheet.create({
   container: {
