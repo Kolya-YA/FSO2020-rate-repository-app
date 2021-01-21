@@ -17,10 +17,12 @@ const styles = StyleSheet.create({
 });
 
 const AppBarTab = ({ tab }) => {
+  const { link, text, forUser: _ , ...props } = tab;
   return (
     <Link 
-      to={tab.link}
+      to={link}
       component={TouchableWithoutFeedback}
+      {...props}
       
     >
       <Text
@@ -29,7 +31,7 @@ const AppBarTab = ({ tab }) => {
         fontSize='subheading'
         fontWeight='bold'
       >
-        {tab.text}
+        {text}
       </Text>
     </Link>
   );

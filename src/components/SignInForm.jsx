@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, StyleSheet, View, Text, Platform } from 'react-native';
+import { Button, StyleSheet, View } from 'react-native';
 import theme from '../config/theme';
 import FormikTextInput from './FormikTextInput';
 
@@ -14,7 +14,6 @@ const SignInForm = ({ onSubmit }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Your platform is: {Platform.OS}</Text>
       <FormikTextInput name='username' label='Username' placeholder='Max. 25 symbols' />
       <FormikTextInput name='password' label='Password' placeholder='Max. 20 symbols' secureTextEntry />
       <Button

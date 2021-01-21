@@ -1,14 +1,17 @@
 import React from 'react';
+import { Platform } from 'react-native';
 
 import { Formik } from 'formik';
-
 import * as yup from 'yup';
+
+import Text from './Text';
 import SignInForm from './SignInForm';
 import useSignIn from '../hooks/useSignIn';
+import { useHistory } from 'react-router-native';
 
 const initialValues = {
-  username: '',
-  password: ''
+  username: 'kalle',
+  password: 'password'
 };
 
 const validationSchema = yup.object().shape({
@@ -20,29 +23,32 @@ const validationSchema = yup.object().shape({
     .required('Password is required')
 });
 
+
 const SignIn = () => {
   const [signIn] = useSignIn();
+  const history = useHistory();
 
-  const onSubmit = async (values) => {
-    console.log('Form submited with values: ', values);
-    const { username, password } = values;
-
+  const onSubmit = async ({ username, password }) => {
     try {
       const { data } = await signIn({ username, password });
-      console.log('AData', data);
+      history.push('/');
+      console.log('Auth data', data);
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={onSubmit}
-      validationSchema={validationSchema}
-    >
-      {({ handleSubmit }) => <SignInForm onSubmit={handleSubmit} />}
-    </Formik>
+    <>
+      <Text>Your platform is: {Platform.OS}</Text>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={onSubmit}
+        validationSchema={validationSchema}
+      >
+        {({ handleSubmit }) => <SignInForm onSubmit={handleSubmit} />}
+      </Formik>
+    </>
   );
 };
 

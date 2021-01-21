@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import theme from '../../config/theme';
-import RepositoryBottom from './ItemBottom';
+import RepositoryItemBottom from './ItemBottom';
 import RepositoryItemCore from './ItemCore';
 
 const styles = StyleSheet.create({
@@ -17,7 +17,7 @@ const RepositoryItem = ({ item }) => {
   return (
     <View style={styles.container}>
       <RepositoryItemCore item={item} />
-      <RepositoryBottom item={item} />
+      <RepositoryItemBottom item={item} />
     </View>
   );
 };
